@@ -47,3 +47,9 @@ const [joke, setJoke] = useState(“”);
   if (error) {
     return <p>Error!</p>;
   }
+
+  ### Bonus
+
+  - create a custom hook that can add event listener
+  - event listener should be added to the window and called a callback with the event object
+  - make it do a clean up with the useEffect callback
