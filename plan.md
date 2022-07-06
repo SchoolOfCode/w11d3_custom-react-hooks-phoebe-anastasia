@@ -1,10 +1,16 @@
 ### Task 1 
-
-- create custom useDocumentTitle hook 
-- hook has to change the title 
-- imported into basicCounter component to reflect the count
-
-
+1.1.
+- create custom useDocumentTitle hook DONE
+- hook has to change the title DONE 
+- imported into basicCounter component to reflect the count DONE
+1.2
+- Extract fiunctionality of decrement and increment count out of Sheep Counter and Basic Counter
+- Create a custom hook function in useCounter.js
+- return increment, decrement and count
+- import this hook into Sheep Counter and Basic Counter
+- Destructure the hook
+- Render increment, decrement, count 
+### 
 
 
 
