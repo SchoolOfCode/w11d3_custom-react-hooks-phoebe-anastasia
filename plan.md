@@ -10,8 +10,12 @@
 - import this hook into Sheep Counter and Basic Counter
 - Destructure the hook
 - Render increment, decrement, count 
-### 
 
+### Task 2 
 
-
-👉 1.2: Extract the common logic in the BasicCounter and the SheepCounter components into a custom hook called useCounter. Write your hook in src/hooks/useCounter.js and then import and use it within both components.
+- extracted functionality of controlled input
+- created a custom hook in usePersistentState
+- return handlechange and text
+- import this hook into controlled input 
+- destructure the hook 
+- handle the event change 
