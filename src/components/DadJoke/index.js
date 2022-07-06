@@ -1,15 +1,17 @@
 import useFetch from "../../hooks/useFetch";
 
 function DadJoke() {
-const {data} = useFetch("https://icanhazdadjoke.com")
-  //  if (error) {
-  //   return <p>Error!</p>;
-  //  }
-  console.log(data)
+const { data, error } = useFetch("https://icanhazdadjoke.com");
+console.log(data)
+
+if (error) {
+  return <p>Error!</p>;
+    }
+
   return (
     <section>
       <h4>Dad Joke!</h4>
-      <p>{data}</p>
+      <p>{data?.joke}</p>
     </section>
   );
 }

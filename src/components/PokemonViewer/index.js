@@ -1,20 +1,14 @@
 import { useEffect, useState } from "react";
+import useFetch from "../../hooks/useFetch";
 
 function PokemonViewer() {
-  const [pokemon, setPokemon] = useState(null);
-  const [error, setError] = useState(null);
-  const [id, setId] = useState("");
 
-  useEffect(() => {
-    if (id) {
-      fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, {
-        headers: { Accept: "application/json" },
-      })
-        .then((res) => res.json())
-        .then((poke) => setPokemon(poke))
-        .catch((err) => setError(err));
-    }
-  }, [id]);
+const {
+  data: pokemon,
+  id,
+  error,
+  setId,
+} = useFetch(`https://pokeapi.co/api/v2/pokemon/`);
 
   if (error) {
     console.log(error);

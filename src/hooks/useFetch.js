@@ -3,25 +3,20 @@ import { useEffect, useState } from "react";
 function useFetch (url) {
       const [data, setData] = useState("");
       const [error, setError] = useState(null);
+      const [id, setId] = useState("");
 
       useEffect(() => { 
-          // if (error) {
-        //   return <p>Error!</p>;
-        // }
         
-        fetch(url, {
+        fetch(`${url}${id}`, {
           headers: { Accept: "application/json" },
         })
           .then((res) => res.json())
-          .then(({ data }) => setData(data))
+          .then((data) => setData(data))
           .catch((err) => setError(err));
-      }, [url]);
-
-     
-
+      }, [id]);
 
       return {
-        data, error
+        data, error, id, setId
       }
     }
 
