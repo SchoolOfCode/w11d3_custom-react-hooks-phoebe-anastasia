@@ -10,6 +10,10 @@ function usePersistentState() {
     function handleChange(e) {
       setText(e.target.value);
     }
+    return {
+        text,
+        handleChange
+    }
 }
 
 export default usePersistentState; 
